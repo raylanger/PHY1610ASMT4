@@ -22,19 +22,19 @@ double polynomial_eq(double x, void* p){
     return k1*std::pow(x,3) - (c1*k1+2*k2)*std::pow(x,2) + 4*c2*k2*x - 2*k2*std::pow(c2,2);
 }
 
-int main(int argc, char* argv[]){
-    struct func_params f_params;
+// int main(int argc, char* argv[]){
+//     struct func_params f_params;
 
-    f_params.k1 = 1.0;
-    f_params.k2 = 0.7;
-    f_params.x0 = 0.5;
-    f_params.y0 = 1;
-    f_params.z0 = 0;
+//     f_params.k1 = 1.0;
+//     f_params.k2 = 0.7;
+//     f_params.x0 = 0.5;
+//     f_params.y0 = 1;
+//     f_params.z0 = 0;
 
-    for (float x = 0; x<2; x+=0.25){
-        double val = polynomial_eq(x,&f_params);
+//     for (float x = 0; x<2; x+=0.25){
+//         double val = polynomial_eq(x,&f_params);
 
-        std::cout << val << "\n";
-    }
-    return 1;
-}
+//         std::cout << val << "\n";
+//     }
+//     return 1;
+// }
