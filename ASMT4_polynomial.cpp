@@ -1,9 +1,5 @@
-#include <gsl/gsl_roots.h>
-#include <iostream>
-#include <cmath>
-
-// Create strucure to hold function parameters
-struct func_params {double k1; double k2; double x0; double y0; double z0;};
+#include "root.h"
+#include "polynomial.h"
 
 // Create polynomial function
 double polynomial_eq(double x, void* p){
@@ -22,6 +18,7 @@ double polynomial_eq(double x, void* p){
     double c1 = x0 - 2*y0;
     double c2 = x0 + z0;
 
+    // Return value of polynomial
     return k1*std::pow(x,3) - (c1*k1+2*k2)*std::pow(x,2) + 4*c2*k2*x - 2*k2*std::pow(c2,2);
 }
 
