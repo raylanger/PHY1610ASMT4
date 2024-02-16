@@ -19,4 +19,4 @@ main.o: ASMT4_main.cpp polynomial.h root.h
 clean:
 	$(RM) polynomial.o main.o multivariate.o
 
-.PHONY: all
+.PHONY: all clean
