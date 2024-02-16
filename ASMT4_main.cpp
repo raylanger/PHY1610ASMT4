@@ -1,7 +1,5 @@
 #include "root.h"
 #include "polynomial.h"
-#include <stdio.h>
-#include <gsl/gsl_errno.h>
 
 int main(int argc, char* argv[]){
       struct func_params f_params = {1.0, 0.7, 0.5,1.0,0.0}; //Initialize parameters
