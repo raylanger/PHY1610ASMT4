@@ -16,4 +16,7 @@ polynomial.o: ASMT4_polynomial.cpp polynomial.h root.h
 main.o: ASMT4_main.cpp polynomial.h root.h
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c -o $@ $<
 
+clean:
+	$(RM) polynomial.o main.o multivariate.o
+
 .PHONY: all
