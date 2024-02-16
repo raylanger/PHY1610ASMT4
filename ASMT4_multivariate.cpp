@@ -36,3 +36,16 @@ int multivariate_eq(const gsl_vector * vec, void* p, gsl_vector * func){
     return GSL_SUCCESS;
     
 }
+
+void output_state (int iter, gsl_multiroot_fsolver * s)
+{
+  printf ("iter = %3d   x = % .8f   y = % .8f   z = % .8f"
+          "       f(x) = [% .3e, % .3e, % .3e]\n",
+          iter,
+          gsl_vector_get (s->x, 0),
+          gsl_vector_get (s->x, 1),
+          gsl_vector_get (s->x, 2),
+          gsl_vector_get (s->f, 0),
+          gsl_vector_get (s->f, 1),
+          gsl_vector_get (s->f, 2));
+}
